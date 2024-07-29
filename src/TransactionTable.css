@@ -1,0 +1,248 @@
+/* TransactionTable.css */
+
+.transaction-table-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+  max-height: 80vh;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f44336;
+  color: #fff;
+  border: none;
+  padding: 7px 10px 5px 10px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+    padding: 8px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* input:invalid {
+    border-color: red;
+  }
+  
+  input:valid {
+    border-color: green;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  } */
+
+/* Base Styles for Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.required {
+  color: red;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+    max-width: 100%; /* Allows the form to take full width on smaller screens */
+  }
+
+  label {
+    font-size: 14px; /* Slightly smaller font size for labels */
+  }
+
+  input,
+  select {
+    padding: 10px; /* Larger padding for easier interaction on touch screens */
+  }
+
+  button {
+    padding: 12px 24px; /* Larger padding for better touch targets */
+    font-size: 18px; /* Larger font size for better readability */
+  }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+
+  label {
+    font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  input,
+  select {
+    padding: 12px; /* Larger padding to improve touch interaction */
+  }
+
+  button {
+    padding: 14px 28px; /* Larger padding for better usability */
+    font-size: 20px; /* Larger font size for readability */
+  }
+  .header-container h1 {
+    font-size: small;
+  }
+
+  .header-container button {
+    font-size: small;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-container h1 {
+  position: relative;
+  margin-inline: auto;
+}
+
+.header-container button {
+  right: 10px;
+}
